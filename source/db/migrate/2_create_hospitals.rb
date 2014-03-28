@@ -6,10 +6,3 @@ class CreateHospitals < ActiveRecord::Migration
     end
   end
 end
-
-
-HASH_ARRAY.each do |hash|
-  Procedure.create!(hash.keys.map{|key| key = :name if key == :procedure})
-  Hospital.create!(hash.keys.map{|key| key = :name if key == :hospital})
-  Price.create!()
-end
