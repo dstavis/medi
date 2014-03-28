@@ -12,7 +12,7 @@ class Controller
     list_by_lowest_price
     if View.offer_map
       hospital_url = @cheapest_hospital.name.gsub(/( )/, '+')
-      git aexec `open "http://google.com/maps/search/#{hospital_url}`
+      exec `open "http://google.com/maps/search/#{hospital_url}"`
     end
   end
 
