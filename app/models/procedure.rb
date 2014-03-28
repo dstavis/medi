@@ -1,3 +1,6 @@
+require 'active_record'
+
+
 class Procedure < ActiveRecord::Base
   has_many :prices
   has_many :hospitals, through: :prices
@@ -7,3 +10,4 @@ class Procedure < ActiveRecord::Base
 
   end
 end
+

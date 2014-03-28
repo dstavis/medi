@@ -1,3 +1,5 @@
+require 'active_record'
+
 class Hospital < ActiveRecord::Base
   has_many :prices
   has_many :procedures, through: :prices

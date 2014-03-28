@@ -51,3 +51,13 @@ desc "Run the specs"
 RSpec::Core::RakeTask.new(:spec)
 
 task :default  => :specs
+
+desc "start app"
+task "run" do
+  Controller.start
+end
+
+desc "open the browser to a given url"
+task "browse" do
+  exec `open http://google.com/maps`
+end
