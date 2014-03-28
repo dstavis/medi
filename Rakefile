@@ -27,8 +27,6 @@ end
 desc "populate the test database with sample data"
 task "db:seed" do
   require APP_ROOT.join('db', 'seeds.rb')
-  ListImporter.seed
-  TaskImporter.seed
 end
 
 desc 'Retrieves the current schema version number'
