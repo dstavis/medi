@@ -2,6 +2,8 @@ require 'pathname'
 require 'sqlite3'
 require 'active_record'
 require 'logger'
+require '../app/controllers/controller.rb'
+require '../app/views/view.rb'
 
 APP_ROOT = Pathname.new(File.expand_path(File.join(File.dirname(__FILE__), '..')))
 
@@ -28,3 +30,5 @@ end
 # path to sql
 ActiveRecord::Base.establish_connection :adapter  => 'sqlite3',
                                         :database => DB_PATH
+
+Controller.get_procedure
